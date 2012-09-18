@@ -25,6 +25,19 @@ to deactivate it, use
 $('.article').highlighter('destroy');
 ```
 
+The styling of the tooltip is completely up to you. This library will simply show and hide it in the correct position when appropriate.
+You can use the ```selector``` option (see next section) to specify how highlighter.js can find your tooltip element. We have been using it with something like
+
+```
+<span class='highlighter-container'>
+    <div>
+     ... my tooltip text ...
+    </div>
+</span>
+```
+
+Where the span has an absolute position, and the div is position relative.
+
 ### Options
 
 On init you can pass in a settings object that will recognize two parameters:
