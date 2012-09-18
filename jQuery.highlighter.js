@@ -14,7 +14,7 @@
  * and/or modify it under the terms of the WTFPL, Version 2, as
  * published by Sam Hocevar. See http://sam.zoy.org/wtfpl/
  * for more details.
- */ 
+ */
 
    (function ($) {
     /*
@@ -88,7 +88,7 @@
             var isDown = false;
 
             return this.each(function () {
-                /* 
+                /*
                  * Insert an html <span> after a user selects text.
                  * We then use the X-Y coordinates of that span
                  * to place our tooltip.
@@ -167,7 +167,7 @@
                     $(settings.selector).show();
                 }
                 $(settings.selector).hide();
-                $(document).bind('mouseup.highlight', function (e) {
+                $(document).bind('mouseup.highlighter', function (e) {
                     if (isDown) {
                         numClicks = 1;
                         clicks = 0;
@@ -177,27 +177,27 @@
                         isDown = false;
                     }
                 });
-                $(this).bind('mouseup.highlight', function (e) {
+                $(this).bind('mouseup.highlighter', function (e) {
                     numClicks = 1;
                     clicks = 0;
                     setTimeout(function () {
                         insertSpanAfterSelection(1);
                     }, 300);
                 });
-                $(this).bind('tripleclick.highlight', function (e) {
+                $(this).bind('tripleclick.highlighter', function (e) {
                     numClicks = 3;
                     setTimeout(function () {
                         insertSpanAfterSelection(3);
                     }, 200);
                 });
 
-                $(this).bind('dblclick.highlight', function (e) {
+                $(this).bind('dblclick.highlighter', function (e) {
                     numClicks = 2;
                     setTimeout(function () {
                         insertSpanAfterSelection(2);
                     }, 300);
                 });
-                $(this).bind('mousedown.highlight', function (e) {
+                $(this).bind('mousedown.highlighter', function (e) {
                     $(settings.selector).hide();
                     isDown = true;
                 });
@@ -206,29 +206,29 @@
         },
         destroy: function (content) {
             return this.each(function () {
-                $(document).unbind('mouseup.highlight');
-                $(this).unbind('mouseup.highlight');
-                $(this).unbind('tripleclick.highlight');
-                $(this).unbind('dblclick.highlight');
-                $(this).unbind('mousedown.highlight');
+                $(document).unbind('mouseup.highlighter');
+                $(this).unbind('mouseup.highlighter');
+                $(this).unbind('tripleclick.highlighter');
+                $(this).unbind('dblclick.highlighter');
+                $(this).unbind('mousedown.highlighter');
             });
         }
     };
 
-    /* 
-     * Method calling logic taken from the 
+    /*
+     * Method calling logic taken from the
      * jQuery article on best practices for
      * plugins.
      *
      * http://docs.jquery.com/Plugins/Authoring
      */
-    $.fn.highlight = function (method) {
+    $.fn.highlighter = function (method) {
         if (methods[method]) {
             return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
         } else if (typeof method === 'object' || !method) {
             return methods.init.apply(this, arguments);
         } else {
-            $.error('Method ' + method + ' does not exist on jQuery.highlight');
+            $.error('Method ' + method + ' does not exist on jQuery.highlighter');
         }
 
     };
