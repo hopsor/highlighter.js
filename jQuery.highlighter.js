@@ -167,6 +167,7 @@
                     $(settings.selector).show();
                 }
                 $(settings.selector).hide();
+                $(settings.selector).css("position", "absolute");
                 $(document).bind('mouseup.highlighter', function (e) {
                     if (isDown) {
                         numClicks = 1;
