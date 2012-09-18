@@ -7,6 +7,12 @@ A jQuery plugin that allows for enabling tooltips on user selected text
 Usage
 -----
 
+Include the script on your page (make sure to use the correct path here)
+
+```
+<script type="text/javascript" src="/js/jQuery.highlighter.js"></script>
+```
+
 Activate the highlighter on the element of your choice, e.g.
 
 ```
