@@ -9,26 +9,26 @@ Usage
 
 Include the script on your page (make sure to use the correct path here)
 
-```
+```html
 <script type="text/javascript" src="/js/jQuery.highlighter.js"></script>
 ```
 
 Activate the highlighter on the element of your choice, e.g.
 
-```
+```javascript
 $('.article').highlighter();
 ```
 
 to deactivate it, use
 
-```
+```javascript
 $('.article').highlighter('destroy');
 ```
 
 The styling of the tooltip is completely up to you. This library will simply show and hide it in the correct position when appropriate.
 You can use the ```selector``` option (see next section) to specify how highlighter.js can find your tooltip element. We have been using it with something like
 
-```
+```html
 <span class='highlighter-container'>
     <div>
      ... my tooltip text ...
@@ -42,7 +42,7 @@ Where the span has an absolute position, and the div is position relative.
 
 On init you can pass in a settings object that will recognize two parameters:
 
-```
+```javascript
 $('.article').highlighter({
                            'selector': '.highlighter-container',
                            'minWords': 0
