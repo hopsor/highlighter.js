@@ -3,6 +3,7 @@ highlighter.js
 
 A jQuery plugin that allows for enabling tooltips on user selected text
 
+[Demo](http://huffpostlabs.github.com/highlighter.js/ "Demo")
 
 Usage
 -----
