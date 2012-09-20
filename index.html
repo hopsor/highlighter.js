@@ -1,0 +1,50 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="app.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body>	
+	<div class="container">
+		<div class="heading">
+			<h3>
+				highlighter.js
+			</h3>
+		</div>
+
+		<div class="article">
+			<p>Highlight some body text! 
+				This is a jQuery plugin that allows you to display a pop-up tooltip when a user highlights text. This can be useful in a variety
+				of situations, and there didn't seem to be a good open source solution before this. See the <a href="https://github.com/huffpostlabs/highlighter.js">github README</a> for details
+				on how to implement this on your website. It's very easy!</p>
+
+			<p>
+				Feel free to use the github page to open any issues or push any fixes. We are very open. This was created by <a href="http://twitter.com/mpconlen">@mpconlen</a> for <a href="http://twitter.com/huffpostlabs">HuffPostLabs</a>
+			</p>
+
+			<p>Twee etsy post-ironic butcher, beard retro pickled raw denim pitchfork stumptown synth fingerstache cosby sweater american apparel mcsweeney's.  Cosby sweater 3 wolf moon wayfarers iphone bespoke stumptown.  Photo booth sartorial ennui, wolf viral blog 3 wolf moon kogi lo-fi street art mlkshk terry richardson.  Lomo four loko vice hella vinyl kale chips, american apparel gluten-free.  Pickled put a bird on it godard, thundercats scenester pitchfork wolf mcsweeney's street art irony hella readymade gentrify cray.  Street art VHS iphone, food truck godard portland PBR mlkshk four loko before they sold out whatever.  Seitan echo park pour-over bicycle rights, gluten-free mixtape street art craft beer.</p>
+
+			<p>Curabitur sodales ligula in libero. <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</i>. Sed dignissim lacinia nunc. <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</i>. Curabitur tortor. Pellentesque nibh. <b>Fusce nec tellus sed augue semper porta</b>. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. <b>Curabitur tortor</b>. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</i>. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p>
+		</div>
+	</div>
+
+	<a href="https://github.com/huffpostlabs/highlighter.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+	<span class='holder'>
+		<div class='share-highlight-btn'>
+			<div class='btn-caret'>
+			</div>
+			<div class='btn-left'>Hey there!</div>
+			<div class='btn-right'>&times;</div>
+		</div>
+	</span>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script> 
+	<script type="text/javascript" src="https://raw.github.com/huffpostlabs/highlighter.js/master/jQuery.highlighter.js" ></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".article").highlighter({"selector": ".holder"})
+		});
+	</script>
+</body>
