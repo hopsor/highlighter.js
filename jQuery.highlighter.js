@@ -61,14 +61,15 @@
      * Adapted from http://stackoverflow.com/a/574922
      */
     function get_previoussibling(n) {
-        var x = n.previousSibling;
-        var y = n;
+        var y = n, x;
         try {
+            x = n.previousSibling;
             while (x && x.nodeType != 1) {
                 y = x;
                 x = x.previousSibling;
             }
         } catch (err) {
+            console.log(err);
             topOffset = -15;
             return y;
         }
@@ -120,18 +121,24 @@
                             el.innerHTML = html;
                             var dummy = document.createElement("span");
 
-                            if (expandedSelRange.startOffset === 0 || expandedSelRange.endOffset === 0) {
+                            if (range.startOffset === 0 && range.endOffset === 0) {
 
                                 var cont = expandedSelRange.startContainer;
                                 var prev = get_previoussibling(cont);
                                 try {
+                                    console.log("try");
                                     expandedSelRange.selectNode(prev.lastChild);
                                 } catch (err) {
+                                    console.log("catch");
                                     leftOffset = 40;
                                     topOffset = -15;
                                     expandedSelRange.selectNode(prev);
                                 }
+                                console.log(expandedSelRange);
                                 expandedSelRange.collapse(false);
+                            } else if(range.endOffset === 0 ) {
+                                topOffset = -25;
+                                leftOffset = 40;
                             }
 
 
