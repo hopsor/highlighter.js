@@ -81,7 +81,8 @@
 
             var settings = $.extend({
                 'selector': '.highlighter-container',
-                'minWords': 0
+                'minWords': 0,
+                'textVariable': null
             }, options);
             var numClicks = 0;
             var topOffset = 0;
@@ -108,6 +109,10 @@
                         sel = window.getSelection();
                         selText = sel.toString();
                         if ($.trim(selText) === '' || selText.split(' ').length < settings.minWords) return;
+
+                        if(settings.textVariable) {
+                            window[settings.textVariable] = selText;
+                        }
 
                         if (sel.getRangeAt && sel.rangeCount) {
                             range = window.getSelection().getRangeAt(0);
