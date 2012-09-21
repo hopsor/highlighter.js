@@ -64,7 +64,7 @@ This plugin has been tested in Chrome, Firefox, Safari and IE 9.
 Authors
 -----
 
-- [Matthew Conlen](https://github.com/mathisonian), matt.conlen@huffingtonpost.com
+- Matthew Conlen, matt.conlen@huffingtonpost.com
 
 License
 -----
