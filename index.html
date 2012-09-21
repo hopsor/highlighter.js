@@ -44,7 +44,17 @@
 	<script type="text/javascript" src="https://raw.github.com/huffpostlabs/highlighter.js/master/jQuery.highlighter.js" ></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$(".article").highlighter({"selector": ".holder"})
+			$(".article").highlighter({"selector": ".holder"});
+
+    
+		    $('.holder').mousedown(function(){
+		        return false;
+		    });
+
+		    $('.btn-right').click(function(){
+		        $('.holder').hide();
+		        return false;
+		    });
 		});
 	</script>
 </body>
