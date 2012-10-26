@@ -1,4 +1,3 @@
-
 /* global jQuery */
 
 /*
@@ -131,15 +130,13 @@
                                 var cont = expandedSelRange.startContainer;
                                 var prev = get_previoussibling(cont);
                                 try {
-                                    console.log("try");
                                     expandedSelRange.selectNode(prev.lastChild);
                                 } catch (err) {
-                                    console.log("catch");
                                     leftOffset = 40;
                                     topOffset = -15;
                                     expandedSelRange.selectNode(prev);
                                 }
-                                console.log(expandedSelRange);
+                                // console.log(expandedSelRange);
                                 expandedSelRange.collapse(false);
                             } else if(range.endOffset === 0 ) {
                                 topOffset = -25;
