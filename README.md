@@ -60,6 +60,13 @@ Compatibility
 This plugin has been tested in Chrome, Firefox, Safari and IE 9.
 
 
+Sightings in the Wild
+-----
+
+If you use this project in a production project, please contact the authors or submit a pull request on this list! We like to know other people find our work helpful.
+
+* http://www.newrepublic.com/
+
 
 Authors
 -----
